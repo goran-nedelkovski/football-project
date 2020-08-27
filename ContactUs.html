@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<htm xlmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <head>
+    <style>
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.contact-info, .contact-info a {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: inherit;
+}
+.contact-info i {
+    color: #ffe600;
+    font-size: 40px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.contact-info h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+p {
+    margin: 0 0 10px;
+}
+.row {
+    margin-left:5px;
+    margin-right:5px;
+}
+.section-title {
+    font-weight: 300;
+}
+.section-title h2 {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 22px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#map {
+        height: 500px;
+        width: 100%;
+}
+@media screen and (max-width: 400px) {
+    #map,.col-25,.col-75 {
+        float:none;
+        width: 100%;
+   }
+}
+</style>
+  </head>
+  <body style="background-color:#b1b1b1;">     
+    <a href="home.html"><span class="fa fa-home" style="color:#fff;position:fixed;top:5px;"></> Home</span></a>        
+      <div class="row section-title text-center">
+				<div class="col-md-8 col-md-offset-2">
+					<h2>Contact informations</h2>
+				</div>
+			</div>
+      <div class="row">
+       <div class="col-25">
+           <label for="comment">Ask question or comment:</label>
+       </div>
+          <div class="col-75">
+            <textarea class="form-control" rows="5" id="comment" style="width:99%;"></textarea>
+          </div>
+           <input id="submit1" type="submit" value="submit" style="float:right;" /> 
+        </div>
+      <div class="row text-center">
+				<div class="col-md-4">
+					<div class="contact-info">
+						<i class="fa fa-home"></i>
+						<h3>Our Address</h3>
+						<p>ul.Zhan Zhores br.129/3-8</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="contact-info">
+						<i class="fa fa-comment"></i>
+						<h3>Our Mail</h3>
+						<a href="#">gorannedelkovski87@yahoo.com</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="contact-info">
+						<i class="fa fa-phone"></i>
+						<h3>Our Phone</h3>
+						<p>075 288 212</p>
+					</div>
+				</div>
+			</div>
+    <h3>My Google Maps</h3>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var uluru = { lat: 41.9973, lng: 21.4280 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtpYyfDh80Zy8DQAV_DOn6rT9r1HGYTxc&callback=initMap">
+    </script>
+     
+  </body>
+
+</body>
+</htm>
